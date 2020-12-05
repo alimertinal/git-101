@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color:blue;
+        }
+
+        .orange{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>asdasda</h1>
+
+    <ul>
+        
+        <li>3</li>
+        <li>5</li>
+        <li>8</li>
+        <li>2</li>
+        <li>11</li>
+        <li>9</li>
+        <li>6</li>
+        <li>13</li>
+
+    </ul>
+    <button>change</button>
+    <h1>title</h1>
+    <h2 class="number">   </h2>
+    <button class="inc">ARTIR</button>
+    <button class="dec">AZALT</button>
+</body>
+
+
+<script>
+const listitem = window.document.querySelectorAll("li")
+
+for (let i=0; i<listitem.length; i++){
+    const linode=listitem[i];
+
+if (linode.innerText<7){linode.classList.add('red')}
+else{linode.classList.add('blue')}
+
+
+}
+const title = window.document.querySelectorAll('h1')[1];
+const button = window.document.querySelector('button');
+
+button.addEventListener('click', () =>{title.classList.toggle('orange');})
+//ödev : sayaç. <h2>0<h2>
+// <button> increment </button>
+// <button> decrement </button>
+//sıfırdan aşağı inmesin
+
+// var x =0
+
+  innernumber = window.document.querySelector('h2') 
+
+ innernumber.innerText=0
+
+var inc = window.document.querySelectorAll('button')[1];
+
+var dec = window.document.querySelectorAll('button')[2];
+
+
+
+
+
+inc.addEventListener('click', () =>{innernumber.innerText++})
+dec.addEventListener('click', () =>{if (innernumber.innerText>0) {innernumber.innerText--} else  (console.log('it cant be less than 0'))})
+
+</script>
+
+
+</html>
+
